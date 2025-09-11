@@ -1,0 +1,45 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../images/wallpaper1.png'); /* apni image ka URL yaha daalein */
+    background-size: cover; /* image puri screen ko cover karegi */
+    background-position: center; /* image ko center me rakhega */
+    background-repeat: no-repeat; /* image repeat nahi hogi */
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-content {
+    background: rgba(0, 0, 0, 0.5); /* halka transparent black box */
+    padding: 20px 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content img {
+    width: 100px;
+}
+
+.form-content input {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius:10px;
+    border:none;
+}
+.forgot-pass-div a{
+    
+}
+.form-content button{
+    padding:10px 40px;
+    margin:20px 0;
+    border-radius:10px;
+    border:none;
+}
