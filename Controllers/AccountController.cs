@@ -4,8 +4,12 @@ namespace Business_Associate.Controllers
 {
     public class AccountController : Controller
     {
-        [Route("/")]
+        //[Route("/")]
         public IActionResult Login()
+        {
+            return View();
+        }
+        public IActionResult Profile()
         {
             return View();
         }

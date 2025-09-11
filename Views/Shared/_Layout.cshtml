@@ -4,14 +4,31 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a asp-action="Profile" asp-controller="Account">Profile</a>
+        <a asp-action="BusinessAssociateList" asp-controller="BusinessAssociate">Business Associate</a>
+        <a asp-action="BusinessAssociateRegister" asp-controller="BusinessAssociate">New Associate</a>
+        <a asp-action="BusinessAssociateDataDownload" asp-controller="BusinessAssociate">Download Associate Data</a>
+    </div>
 
+    <!-- Header -->
+    <div class="header">
+        <h1>Business Associate Software</h1>
+        <button class="logout-btn">Logout</button>
+    </div>
 
+    <!-- Main Content -->
+    <div class="content">
+        @RenderBody()
+    </div>
 
 
     <div>
-        @RenderBody()
+        
     </div>
 </body>
 </html>
