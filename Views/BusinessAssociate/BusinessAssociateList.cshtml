@@ -1,1 +1,52 @@
-﻿<h1>Business Associate List</h1>
+﻿<link href="~/css/ba-list-stylesheet.css" rel="stylesheet" />
+
+<div class="associate-container">
+    <h2>Business Associate Section</h2>
+
+    <!-- Dropdown + Button -->
+    <div class="form-row">
+        <select id="associateSelect">
+            <option value="">-- Select Business Associate --</option>
+            <option value="1">Ravi Sharma</option>
+            <option value="2">Anita Verma</option>
+            <option value="3">Suresh Kumar</option>
+        </select>
+        <button onclick="showDetails()">Search</button>
+    </div>
+
+    <!-- Details Section -->
+    <div id="details" class="details-box">
+        <h3>Associate Details</h3>
+        <p class="detail-item"><b>Name:</b> <span id="dName"></span></p>
+        <p class="detail-item"><b>Phone:</b> <span id="dPhone"></span></p>
+        <p class="detail-item"><b>Email:</b> <span id="dEmail"></span></p>
+        <p class="detail-item"><b>Office Address:</b> <span id="dOffice"></span></p>
+    </div>
+</div>
+
+
+<script>
+    // Dummy Data
+    const associates = {
+      1: {name: "Ravi Sharma", phone: "9876543210", email: "ravi@gmail.com", office: "Delhi Office"},
+      2: {name: "Anita Verma", phone: "9123456780", email: "anita@gmail.com", office: "Noida Office"},
+      3: {name: "Suresh Kumar", phone: "9012345678", email: "suresh@gmail.com", office: "Gurgaon Office"},
+    };
+
+    function showDetails() {
+      const select = document.getElementById("associateSelect");
+      const value = select.value;
+
+      if (value && associates[value]) {
+        document.getElementById("dName").innerText = associates[value].name;
+        document.getElementById("dPhone").innerText = associates[value].phone;
+        document.getElementById("dEmail").innerText = associates[value].email;
+        document.getElementById("dOffice").innerText = associates[value].office;
+
+        document.getElementById("details").style.display = "block";
+      } else {
+        alert("Please select a business associate.");
+        document.getElementById("details").style.display = "none";
+      }
+    }
+</script>

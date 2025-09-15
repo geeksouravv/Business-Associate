@@ -1,1 +1,136 @@
-﻿<h1>Create Account</h1>
+﻿<link href="~/css/ba-register-stylesheet.css" rel="stylesheet" />
+
+<div class="form-container">
+    <h2>New Associate Form</h2>
+
+    <!-- Organization Details -->
+    <div class="form-group">
+        <label>Organization Name:</label>
+        <input type="text" placeholder="Enter Organization Name">
+    </div>
+    <div class="form-group">
+        <label>Contact Person:</label>
+        <input type="text" placeholder="Enter Contact Person">
+    </div>
+    <div class="form-group">
+        <label>Mobile Number:</label>
+        <input type="text" placeholder="Enter Mobile Number">
+    </div>
+    <div class="form-group">
+        <label>Address:</label>
+        <textarea rows="2" placeholder="Enter Address"></textarea>
+    </div>
+    <div class="form-group">
+        <label>GST Number (if applicable):</label>
+        <input type="text" placeholder="Enter GST Number">
+    </div>
+
+    <!-- Order Details Table -->
+    <h3>Order Details</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Product Name / Code</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Amount</th>
+                <th>Received</th>
+                <th>To Be Paid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><input type="text" value="Shadow Bourne (100ml)"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" value="Shadow Creed (100ml)"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><input type="text" value="Ever After (100ml)"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><input type="text" value="Aether Allure (100ml)"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><input type="text" value="Essential Oil (10ml*3)"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><b>Grand Total</b></td>
+                <td colspan="6"><input type="number" placeholder="Total"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Other Fields -->
+    <div class="form-group">
+        <label>In Words:</label>
+        <input type="text" placeholder="Enter Amount in Words">
+    </div>
+
+    <div class="form-group">
+        <label>Mode of Payment:</label>
+        <select>
+            <option value="">-- Select --</option>
+            <option>Cash</option>
+            <option>UPI</option>
+            <option>Bank Transfer</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Business Associate Name:</label>
+        <input type="text" placeholder="Enter Associate Name">
+    </div>
+    <div class="form-group">
+        <label>Code:</label>
+        <input type="text" placeholder="Enter Associate Code">
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-container">
+        <button type="submit" class="btn">Save</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+        <button class="btn" onclick="downloadPDF()">Download PDF</button>
+    </div>
+</div>
+
+<script>
+    function downloadPDF() {
+      // Yahaan apna PDF file ka path dal do
+      window.location.href = '';
+    }
+
+</script>
